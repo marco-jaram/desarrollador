@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+
+/*ffont-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;;*/
+
+
+/*Paleta de color y tipografia*/
+
+ :root {
+    --color-primario: #C06014;
+    --color-claro1: #EDDBCD;
+    --color-claro2: #CDCDCD;
+    --color-oscuro1: #000000;
+    --color-oscuro2: #383735;
+    --tipo-primario: 'Montserrat', sans-serif;
+    --tipo-secundario: 'Open Sans', sans-serif;
+}
+
+
+/*GLOBALES*/
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#botonArriba {
+    color: var(--color-primario);
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    font-size: 30px;
+    transform: scale(0);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    max-width: 95%;
+}
+
+.mt-1 {
+    margin-top: 100px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-style: 1.7rem;
+}
+
+p {
+    font-family: var(--tipo-secundario);
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: .03rem;
+    line-height: 3.5rem;
+    color: var(--color-oscuro1);
+}
+
+li {
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23c06014' fill-opacity='0.18'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+    background-color: transparent;
+    border-bottom-color: var(--color-claro2);
+    border-right-color: var(--color-claro2);
+    border-style: none dotted solid none;
+    border-width: 3px;
+    border-bottom-right-radius: 400px;
+    min-height: 100vh;
+}
+
+.logo-txt {
+    font-size: 2rem;
+}
+
+.boton-hamburguesa {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: none;
+    font-size: 25px;
+}
+
+.titulos {
+    padding-top: 10px;
+}
+
+.titulo-principal h1 {
+    font-size: 4rem;
+}
+
+.barra-nav {
+    padding: 5px;
+    background-color: var(--color-claro2);
+    position: relative;
+}
+
+.menu-desktop {
+    display: none;
+}
+
+
+/***Lista movil****/
+
+.ham {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 5px;
+    align-items: center;
+}
+
+
+/**listanavegacion**/
+
+.lista-navegacion {
+    background-color: var(--color-primario);
+    width: 100%;
+    position: absolute;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.crece .menu {
+    height: 100vh;
+    opacity: 1;
+}
+
+.lista-navegacion li {
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.lista-navegacion li a {
+    text-decoration: none;
+    color: white;
+}
+
+.lista-navegacion ul {
+    padding-left: 0px;
+}
+
+
+/***FIN lista movil****/
+
+.titulo-principal h1 {
+    font-family: var(--tipo-primario);
+    font-weight: 900;
+}
+
+.titulo-principal {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: titulo-principal;
+    animation-name: titulo-principal;
+    padding-top: 150px;
+}
+
+@-webkit-keyframes titulo-principal {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes titulo-principal {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/*****animacion flecha*****/
+
+.flecha {
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/****** FIN animacion flecha*****/
+
+
+/**Sobre mi**/
+
+.foto-marco img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.contendio-sobremi {
+    text-align: center;
+}
+
+.contendio-sobremi h2 {
+    color: var(--color-primario);
+    font-family: var(--tipo-secundario);
+    padding-bottom: 50px;
+}
+
+details p {
+    text-align: left;
+}
+
+.sobremi-saber-mas span {
+    font-size: 1.6rem;
+    color: var(--color-primario);
+}
+
+
+/**FIN sobre mi***/
+
+
+/***Portafolio***/
+
+.portafolio {
+    background-color: var(--color-claro1);
+    padding: 30px 0px;
+}
+
+.portafolio-contenido {
+    text-align: center;
+}
+
+.portafolio-grid {
+    align-items: center;
+}
+
+.portafolio-card {
+    border-radius: 6px;
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.portafolio-card h4 {
+    margin: 0px;
+    padding-top: 15px;
+}
+
+.portafolio-card img {
+    width: 100%;
+}
+
+.portafolio-card p {
+    margin-top: 0px;
+    font-weight: 100;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: var(--color-oscuro1);
+}
+
+.contenido-card {
+    padding: 10px;
+}
+
+.contenido-card:hover {
+    transform: scale(.9);
+}
+
+.portafolio-botones {
+    padding: 10px;
+    background-color: rgba(165, 120, 49, 0.767);
+    border-radius: 5px;
+    color: var(--color-claro1);
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+}
+
+.portafolio-boton-vermas {
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--color-primario);
+    border-radius: 5px;
+    color: var(--color-claro1);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 50px;
+}
+
+
+/**FIN de portafolio****/
+
+
+/*****Tecnologias******/
+
+.tecnologias-titulo {
+    font-size: 3.2rem;
+    font-family: var(--tipo-primario);
+    color: var(--color-primario);
+    text-align: center;
+}
+
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.card-tecnologias {
+    text-align: center;
+}
+
+.icono-tecnologias {
+    font-size: 100px;
+    color: var(--color-oscuro2);
+}
+
+
+/****FIN tecnologias******/
+
+
+/**SERVICIOS***/
+
+main {
+    background-color: #c06114e3;
+}
+
+.contenedor-servicios {
+    padding: 20px;
+}
+
+.servicios {
+    height: 300px;
+}
+
+.contenedor-servicios h1 {
+    color: rgb(228, 220, 220);
+    text-align: center;
+    font-family: var(--tipo-primario);
+    font-size: 3.2rem;
+}
+
+.servicios h3 {
+    font-family: var(--tipo-secundario);
+    color: #EDDBCD;
+}
+
+.servicios ul li {
+    padding: 15px;
+    color: var(--color-claro1);
+}
+
+
+/**FIN de  SERVICIOS***/
+
+
+/***Contactame****/
+
+.contactame {
+    text-align: center;
+}
+
+.contactame h3 {
+    color: var(--color-primario);
+    font-size: 3.2rem;
+}
+
+.icono-contactame {
+    font-size: 4rem;
+    margin: 10px;
+    color: var(--color-oscuro2);
+}
+
+.icono-contactame:hover {
+    color: var(--color-primario);
+}
+
+.mailito h4,
+.redes h4 {
+    font-size: 3rem;
+    color: var(--color-oscuro2);
+}
+
+
+/****FIN contactame****/
+
+.footer {
+    background-color: var(--color-oscuro2);
+}
+
+.contenido-footer {
+    padding: 20px 5px;
+    font-size: 16px;
+    color: var(--color-claro1);
+}
+
+.contenido-footer div {
+    margin: 10px;
+}
+
+
+/*****************************************/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*mediaquery para pantalla de lap generica*/
+
+
+/*****************************************/
+
+@media (min-width: 414px) {}
+
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    h1 {
+        font-size: 3.8rem;
+    }
+    h2 {
+        font-size: 3.4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+    h4 {
+        font-size: 2.6rem;
+    }
+    .mt-1-md {
+        margin-top: 180px;
+    }
+    header {
+        background-image: url(/img/header1200-min.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-bottom-right-radius: 0px;
+        min-height: 90vh;
+        border-width: 0px;
+        position: relative;
+        background-attachment: fixed;
+    }
+    header::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        opacity: 0.5;
+    }
+    .boton-hamburguesa {
+        display: none;
+    }
+    /******/
+    .ham {
+        display: none;
+    }
+    .lista-navegacion {
+        display: none;
+    }
+    .menu-desktop {
+        display: inline-block;
+    }
+    .menu-desktop a {
+        color: var(--color-oscuro2);
+        text-decoration: none;
+        margin: 10px;
+        font-size: 1.6rem;
+    }
+    .menu-desktop a:hover {
+        color: var(--color-primario);
+    }
+    .boton-hamburguesa {
+        display: none;
+    }
+    /****/
+    .titulo-principal h1 {
+        color: white;
+    }
+    .titulo-principal {
+        padding-top: 150px;
+        position: relative;
+    }
+    .flecha {}
+    /***Sobre mi**/
+    .sobremi {
+        margin-top: 80px;
+    }
+    .sobre-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+    }
+    /**FIN sobre mi***/
+    /*****Portafolio******calcular gap y columnas segun medida de imagens**/
+    .portafolio-card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+    }
+    /***FIB de**Portafolio********/
+    /**Grid tecnologias***/
+    .grid-tecnologias {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /***SERVICIOS****/
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+    }
+    .servicios h3 {
+        text-align: right;
+        padding-top: 50px;
+    }
+    /*FIN _____mediaquery para pantalla de lap generica*/
+    /**Mediaqueri para pantalla monitor grande****/
+    @media (min-width: 1024px) {
+        p {
+            font-size: 2rem;
+            letter-spacing: .03rem;
+            line-height: 4rem;
+        }
+    }
+}
