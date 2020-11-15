@@ -26,10 +26,12 @@ html {
 
 #botonArriba {
     color: var(--color-primario);
+    -webkit-position: fixed;
     position: fixed;
     bottom: 80px;
     right: 20px;
     font-size: 30px;
+    -webkit-transform: scale(0);
     transform: scale(0);
 }
 
@@ -482,8 +484,6 @@ main {
 
 /*****************************************/
 
-@media (min-width: 414px) {}
-
 @media (min-width: 768px) {
     .contenedor {
         max-width: 1200px;
@@ -506,15 +506,15 @@ main {
         margin-top: 180px;
     }
     header {
-        background-image: url(/img/header1200-min.png);
-        background-repeat: no-repeat;
+        background-image: url(/img/header.gif);
         background-position: center;
+        background-attachment: scroll;
         background-size: cover;
+        background-repeat: no-repeat;
         border-bottom-right-radius: 0px;
         min-height: 90vh;
         border-width: 0px;
         position: relative;
-        background-attachment: fixed;
     }
     header::before {
         content: "";
@@ -592,13 +592,18 @@ main {
         text-align: right;
         padding-top: 50px;
     }
-    /*FIN _____mediaquery para pantalla de lap generica*/
-    /**Mediaqueri para pantalla monitor grande****/
-    @media (min-width: 1024px) {
-        p {
-            font-size: 2rem;
-            letter-spacing: .03rem;
-            line-height: 4rem;
-        }
+}
+
+
+/*FIN _____mediaquery para pantalla de lap generica*/
+
+
+/**Mediaqueri para pantalla monitor grande****/
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 2rem;
+        letter-spacing: .03rem;
+        line-height: 4rem;
     }
 }
