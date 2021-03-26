@@ -267,7 +267,28 @@ header {
 details p {
     text-align: left;
 }
+details {
+    cursor: pointer;
+    color: var(--color-primario);
+}
+summary {
+    outline: none;
+}
 
+details[open] summary~* {
+    animation: desplegar .5s ease;
+}
+
+@keyframes desplegar {
+    0% {
+        opacity: 0;
+        margin-left: -10px
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
 .sobremi-saber-mas span {
     font-size: 1.6rem;
     color: var(--color-primario);
